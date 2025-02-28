@@ -121,6 +121,10 @@
   }
 }
 
+// end of product content
+
+//start of category
+
 .category__tab {
   ul {
     @include centerBetween;
@@ -151,5 +155,231 @@
       background-color: $clr-primary;
       color: $clr-light;
     }
+  }
+}
+
+//end of category
+
+//start of booking
+
+.booking {
+  min-height: 50rem;
+  background-image: url(../../img/restaurant.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -520px;
+  background-position-x: 145px;
+
+  @include mediaQuery($mobile) {
+    background-position-y: 0;
+    background-position-x: 0;
+  }
+
+  &__content {
+    background-color: $clr-primary;
+    color: $clr-light;
+    height: 50rem;
+    width: 50%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    justify-content: flex-start;
+
+    @include mediaQuery($mobile) {
+      margin: 2rem 0;
+      padding: 2rem;
+      width: 100%;
+      background-color: rgba($clr-primary, 0.8);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 100%;
+      top: 0;
+      height: 100%;
+      width: 40vw;
+      background-color: $clr-primary;
+      @include mediaQuery($mobile) {
+        display: none;
+      }
+    }
+
+    .inner {
+      max-width: 40rem;
+      width: 100%;
+      small {
+        text-transform: uppercase;
+        color: $clr-dark;
+        font-weight: 800;
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: clamp(3rem, 6vw, 5rem);
+        margin: 4rem 0 3rem;
+      }
+
+      p {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+//end of booking
+
+//start of work/ services
+
+.work__wrapper {
+  @include grid(4, 2rem);
+  @include mediaQuery($mobile) {
+    @include grid(1, 2rem);
+  }
+
+  .work__card {
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    text-align: center;
+
+    i {
+      color: $clr-primary;
+      font-size: 3rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin: 2rem 0;
+      color: $clr-primary;
+    }
+
+    p {
+      opacity: 0.5;
+      font-weight: bold;
+    }
+  }
+}
+//end of work/ services
+
+//start of app content
+
+.app {
+  &__wrapper {
+    padding: 2rem 10rem;
+    background-color: lighten($clr-primary, 20);
+    border-radius: 3rem;
+
+    @include gridUneven(2fr 1fr, 2rem);
+    @include mediaQuery($mobile) {
+      padding: 2rem;
+      @include gridUneven(1fr, 2rem);
+      max-height: 74rem;
+    }
+
+    height: 100%;
+    max-height: 44rem;
+    overflow: hidden;
+  }
+
+  &__img {
+    @include mediaQuery($mobile) {
+      text-align: center;
+      margin-top: 5rem;
+    }
+  }
+
+  &__content {
+    max-width: 55rem;
+    width: 100%;
+
+    h2 {
+      font-size: clamp(3rem, 6vw, 5rem);
+      margin: 4rem 0 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+      opacity: 0.5;
+      margin-bottom: 4rem;
+      font-weight: bold;
+    }
+  }
+}
+//end of app content
+
+//start of testimonials
+
+.testimonial {
+  &__wrapper {
+    @include grid(3, 2rem);
+    @include mediaQuery($mobile) {
+      @include grid(1, 2rem);
+    }
+  }
+
+  &__card {
+    @include gridUneven(1fr 1.8fr, 2rem);
+    border-radius: 1rem;
+    box-shadow: $shadow;
+    padding: 1rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      background-color: $clr-primary;
+      top: 15px;
+      left: 15px;
+      z-index: -1;
+    }
+
+    img {
+      @include imgFit(10rem, 10rem);
+      border-radius: 50%;
+      transition: 0.5s ease;
+    }
+
+    h4 {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    small {
+      font-size: 1.2rem;
+      opacity: 0.5;
+    }
+    ul {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+
+      i {
+        color: $clr-primary;
+      }
+    }
+
+    p {
+      opacity: 0.8;
+    }
+  }
+
+  .inner {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid $clr-primary;
+  }
+
+  &__card:hover img {
+    transform: scale(1.2);
+  }
+
+  &__img {
+    padding: 1rem;
   }
 }
