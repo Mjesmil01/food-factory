@@ -470,10 +470,169 @@
       </div>
     </section>
 
-    <div class="newsletter">
+    <section class="newsletter">
       <div class="newsletter__wrapper">
-        <h2>Subscriver</h2>
+        <h2>Subcribe to our <span>Newsletter</span></h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. A asperiores
+          quae dolor assumenda praesentium quasi.
+        </p>
+        <form action="#">
+          <input type="email" placeholder="Enter your email address" />
+          <button type="submit">Subscribe</button>
+        </form>
       </div>
+    </section>
+
+    <section class="faq py--6">
+      <div class="container">
+        <div class="block__header">
+          <small><span>FAQS</span></small>
+          <h2>Frequently Asked <span>Questions</span></h2>
+        </div>
+
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
+              velit, vitae voluptatem facilis sequi aliquam.
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <div class="faq__answer open">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              voluptatibus adipisci quis nihil.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
+              velit, vitae voluptatem facilis sequi aliquam.
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <div class="faq__answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              voluptatibus adipisci quis nihil.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
+              velit, vitae voluptatem facilis sequi aliquam.
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <div class="faq__answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              voluptatibus adipisci quis nihil.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
+              velit, vitae voluptatem facilis sequi aliquam.
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <div class="faq__answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              voluptatibus adipisci quis nihil.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq__block">
+          <div class="faq__question">
+            <h3>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
+              velit, vitae voluptatem facilis sequi aliquam.
+            </h3>
+            <i class="fas fa-plus"></i>
+          </div>
+
+          <div class="faq__answer">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              voluptatibus adipisci quis nihil.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer py--6">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__content">
+            <h3>Food <span>Factory</span></h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              possimus reiciendis in facere velit fuga iure officiis expedita
+              praesentium delectus!
+            </p>
+          </div>
+
+          <div class="footer__list">
+            <h3>Food Factory</h3>
+            <ul>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Mobile Age</a></li>
+              <li><a href="#">Booking</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__list">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#">Get Help</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Feedback</a></li>
+            </ul>
+          </div>
+          <div class="footer__list">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Terms and Condition</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      <span>Copyright &copy; Food Factory 2022 All Rights Reserved</span>
     </div>
+
+    <script>
+      const questions = document.querySelectorAll(".faq__question");
+
+      questions.forEach((questionItem) => {
+        questionItem.addEventListener("click", () => {
+          questionItem.nextElementSibling.classList.toggle("open");
+          questionItem.classList.toggle("open");
+        });
+      });
+    </script>
   </body>
 </html>
